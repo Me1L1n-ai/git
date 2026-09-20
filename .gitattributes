@@ -1,0 +1,26 @@
+# 统一行尾：仓库内一律存为 LF，检出时由 Git 按平台决定
+# 详见 https://docs.github.com/get-started/getting-started-with-git/configuring-git-to-handle-line-endings
+* text=auto
+
+# 常见二进制文件，禁止任何行尾/编码转换
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+*.7z   binary
+*.gz   binary
+*.exe  binary
+*.dll  binary
+*.so   binary
+*.dylib binary
+
+# Windows 专用脚本保持 CRLF，避免某些解释器解析异常
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Shell 脚本强制 LF，否则 Linux 下会因 \r 报 "bad interpreter"
+*.sh   text eol=lf
