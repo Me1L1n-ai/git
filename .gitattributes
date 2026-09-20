@@ -2,6 +2,9 @@
 # 详见 https://docs.github.com/get-started/getting-started-with-git/configuring-git-to-handle-line-endings
 * text=auto
 
+# 配置文件自身固定 LF，避免每次 add 都告警
+.gitattributes text eol=lf
+
 # 常见二进制文件，禁止任何行尾/编码转换
 *.png  binary
 *.jpg  binary
